@@ -18,12 +18,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Container(),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.red[900],
-          child: Icon(Icons.add_alert),
-          onPressed: null,
+        backgroundColor: Colors.teal,
+
+        /// A widget that insets its child by sufficient padding to avoid
+        /// intrusions by the operating system.
+        body: SafeArea(
+          /// The Container can have only one child
+          child: Container(
+            height: 100,
+            width: 100,
+            //margin: EdgeInsets.all(20),
+            //margin: EdgeInsets.symmetric(vertical: 50, horizontal: 16),
+            //margin: EdgeInsets.fromLTRB(16, 32, 16, 10),
+            margin: EdgeInsets.only(left: 30),
+            padding: EdgeInsets.all(20),
+            color: Colors.white,
+            child: Center(child: Text("Hello")),
+          ),
         ),
       ),
     );
