@@ -12,8 +12,10 @@ void main() {
         backgroundColor: Colors.blueGrey,
         body: Center(
           child: Image(
-            image: NetworkImage(
-                'https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg'),
+            // Remote image sample
+            //image: NetworkImage('https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg'),
+            // Asset image sample
+            image: AssetImage('images/hybrid.png'),
           ),
         ),
         appBar: AppBar(
