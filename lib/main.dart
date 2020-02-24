@@ -24,17 +24,49 @@ class MyApp extends StatelessWidget {
         /// intrusions by the operating system.
         body: SafeArea(
           /// The Container can have only one child
-          child: Container(
-            height: 100,
-            width: 100,
-            //margin: EdgeInsets.all(20),
-            //margin: EdgeInsets.symmetric(vertical: 50, horizontal: 16),
-            //margin: EdgeInsets.fromLTRB(16, 32, 16, 10),
-            margin: EdgeInsets.only(left: 30),
-            padding: EdgeInsets.all(20),
-            color: Colors.white,
-            child: Center(child: Text("Hello")),
-          ),
+          child: Column(
+              //mainAxisAlignment: MainAxisAlignment.start,
+              //mainAxisAlignment: MainAxisAlignment.center,
+              //mainAxisAlignment: MainAxisAlignment.end,
+              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Container(
+                  height: 100,
+                  margin: EdgeInsets.all(20),
+                  //margin: EdgeInsets.symmetric(vertical: 50, horizontal: 16),
+                  //margin: EdgeInsets.fromLTRB(16, 32, 16, 10),
+                  //margin: EdgeInsets.only(left: 30),
+                  color: Colors.white,
+                  child: Center(child: Text("Hello")),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 100,
+                  margin: EdgeInsets.all(20),
+                  //margin: EdgeInsets.symmetric(vertical: 50, horizontal: 16),
+                  //margin: EdgeInsets.fromLTRB(16, 32, 16, 10),
+                  //margin: EdgeInsets.only(left: 30),
+                  color: Colors.orange,
+                  child: Center(child: Text("Hello")),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Container(
+                  height: 100,
+                  margin: EdgeInsets.all(20),
+                  //margin: EdgeInsets.symmetric(vertical: 50, horizontal: 16),
+                  //margin: EdgeInsets.fromLTRB(16, 32, 16, 10),
+                  //margin: EdgeInsets.only(left: 30),
+                  color: Colors.red,
+                  child: Center(child: Text("Hello")),
+                ),
+              ]),
         ),
       ),
     );
