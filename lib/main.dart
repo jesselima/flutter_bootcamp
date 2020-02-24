@@ -6,12 +6,26 @@ import 'package:flutter/material.dart';
 /// https://api.flutter.dev/flutter/material/MaterialApp-class.html
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(MyApp());
+}
+
+/// The hot reload will work only if the MaterialApp/Scaffold are inside a
+/// StatelessWidget or StatefulWidget.
+
+class MyApp extends StatelessWidget {
+  // Every time we make a change this build() method will be called.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.white,
         body: Container(),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.red[900],
+          child: Icon(Icons.add_alert),
+          onPressed: null,
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
